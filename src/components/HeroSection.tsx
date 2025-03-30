@@ -1,6 +1,8 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Clock, CheckCircle } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -23,22 +25,50 @@ const HeroSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 animate-fade-in">
+            <div className="flex flex-wrap gap-2 mb-3">
+              <Badge className="bg-eco-accent text-white text-sm px-3 py-1 font-bold">200枚3000円</Badge>
+              <Badge className="bg-eco-green text-white text-sm px-3 py-1 font-bold flex items-center">
+                <Clock className="mr-1 h-3 w-3" /> 朝8時までの注文で夕方納品
+              </Badge>
+              <Badge className="bg-red-500 text-white text-sm px-3 py-1 font-bold">在庫限定</Badge>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-eco-dark">
               未来を変える名刺<br />
               <span className="text-eco-green">CO2ゼロ</span>で、<br />
               あなたのビジネスも<br />グリーンに！
             </h1>
+            
             <p className="text-lg md:text-xl text-gray-700 max-w-lg">
               環境に配慮した最新技術で印刷した高品質なCO2フリー名刺。今すぐ、エコで洗練されたビジネスツールを手に入れよう。
             </p>
+            
             <div className="pt-4">
               <Button 
-                className="bg-eco-accent hover:bg-opacity-90 text-white text-lg px-8 py-6"
+                className="bg-eco-accent hover:bg-opacity-90 text-white text-lg px-8 py-6 relative"
                 size="lg"
                 onClick={() => document.getElementById("purchase")?.scrollIntoView({ behavior: "smooth" })}
               >
                 今すぐ購入する
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-pulse">
+                  即日発送
+                </span>
               </Button>
+            </div>
+            
+            <div className="flex items-center gap-3 mt-4 text-sm text-gray-600">
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-eco-green mr-1" />
+                <span>環境認証取得済み</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-eco-green mr-1" />
+                <span>高品質保証</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 text-eco-green mr-1" />
+                <span>安心サポート</span>
+              </div>
             </div>
           </div>
 

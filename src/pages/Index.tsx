@@ -7,6 +7,7 @@ import ProcessSection from "@/components/ProcessSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import FloatingCta from "@/components/FloatingCta";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
         <CtaSection />
       </main>
       <Footer />
+      <FloatingCta />
     </div>
   );
 };
