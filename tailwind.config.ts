@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				eco: {
+					'green': '#2D7738',
+					'light-green': '#4CAF50',
+					'leaf': '#8BC34A',
+					'accent': '#FF9800',
+					'paper': '#F5F5DC',
+					'dark': '#333333',
+					'light': '#FFFFFF'
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out'
+			},
+			fontFamily: {
+				'sans': ['Noto Sans JP', 'sans-serif'],
+				'serif': ['Noto Serif JP', 'serif'],
 			}
 		}
 	},
